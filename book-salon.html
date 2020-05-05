@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Care4looks</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="Custom.css">
+    <link rel="stylesheet" href="Custom.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/My Post.png" type="image/gif" sizes="16x16" />
+  </head>
+  <style>
+    .jumbotron{
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgb(0, 0, 0), 0 0 20px rgb(14, 14, 14),
+      0 0 30px #00000073, 0 0 40px #13131373, 0 0 50px #27272785,
+      0 0 60px #29292967, 0 0 70px #494949;
+    }
+    .jumbo-back{
+            background:url("images/chester-wade-417788-unsplash (1).jpg");
+            background-size: 100%;
+            background-position: center;
+     }
+    .align {
+      padding-top: 5%;
+    }
+    .bg-nav {
+        background: rgb(26, 26, 26);
+      }
+      .navbar-brand {
+        font-family: fantasy;
+        font-size: 30px;
+        padding: 0;
+      }
+      .text-black {
+  color: rgb(0, 0, 0) !important;
+}
+
+    .glow{
+      text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 20px rgb(14, 14, 14),
+      0 0 30px #00000073, 0 0 40px #13131373, 0 0 50px #27272785,
+      0 0 60px #29292967, 0 0 70px #494949;
+    }
+    .glow-white{
+      text-shadow: 0 0 10px rgb(141, 141, 141), 0 0 20px rgb(182, 182, 182),
+      0 0 30px #7e7e7e73, 0 0 40px #ffffff73, 0 0 50px #a1a1a185,
+      0 0 60px #ffffff67, 0 0 70px #777777;
+    }
+body::before{
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin: none;
+  display: block;
+  background: Linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7));
+  background: url("images/western-saloon-53742_1280.jpg") no-repeat;
+
+  /* background:black; */
+  background-position: center;
+  background-size: 100%;
+  width: 102%;
+  height: 100%;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(4px);
+}
+.btnh {
+  background-color: DodgerBlue; 
+  border: none; 
+  color: white; 
+  padding: 10px 10px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  
+}
+
+
+.btnh:hover {
+  background-color: RoyalBlue;
+  box-shadow: 0 0 0 0.2rem rgba(0, 47, 255, 0.445);
+}
+
+.success-checkmark {
+  width: 80px;
+  height: 115px;
+  margin: 0 auto;
+}
+.success-checkmark .check-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 4px solid #4CAF50;
+}
+.success-checkmark .check-icon::before {
+  top: 3px;
+  left: -2px;
+  width: 30px;
+  transform-origin: 100% 50%;
+  border-radius: 100px 0 0 100px;
+}
+.success-checkmark .check-icon::after {
+  top: 0;
+  left: 30px;
+  width: 60px;
+  transform-origin: 0 50%;
+  border-radius: 0 100px 100px 0;
+  animation: rotate-circle 4.25s ease-in;
+}
+.success-checkmark .check-icon::before, .success-checkmark .check-icon::after {
+  content: '';
+  height: 100px;
+  position: absolute;
+  background: #FFFFFF;
+  transform: rotate(-45deg);
+}
+.success-checkmark .check-icon .icon-line {
+  height: 5px;
+  background-color: #4CAF50;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+}
+.success-checkmark .check-icon .icon-line.line-tip {
+  top: 46px;
+  left: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+  animation: icon-line-tip 0.75s;
+}
+.success-checkmark .check-icon .icon-line.line-long {
+  top: 38px;
+  right: 8px;
+  width: 47px;
+  transform: rotate(-45deg);
+  animation: icon-line-long 0.75s;
+}
+.success-checkmark .check-icon .icon-circle {
+  top: -4px;
+  left: -4px;
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: content-box;
+  border: 4px solid rgba(76, 175, 80, 0.5);
+}
+.success-checkmark .check-icon .icon-fix {
+  top: 8px;
+  width: 5px;
+  left: 26px;
+  z-index: 1;
+  height: 85px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color: #FFFFFF;
+}
+
+@keyframes rotate-circle {
+  0% {
+    transform: rotate(-45deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+  }
+  12% {
+    transform: rotate(-405deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+@keyframes icon-line-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+@keyframes icon-line-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+
+  </style>
+  <body>
+      <div style="margin-top:20px;float: right;margin-right:20px"><a href="Index.html"><button class="btnh btn" "><i class="fa fa-home"></i> Home</button></a></div>
+      <div class="align" >
+        <div class=" container">
+            <div class="jumbotron" style="background:url('images/salon-2589649_1280.jpg');background-position: bottom;background-size:100%">
+              <h1 class="display-4 glow custom-fonts-8 mb-5" style="color:rgb(255, 255, 255);font-size: 400%">Smart Care Unisex Salon & Spa 
+                </h1>
+                <!-- <hr class="my-4" /> -->
+              <p class="lead text-white">
+                  Rau Bypass, Rau, Indore, Madhya Pradesh
+                    
+              </p>
+             
+              <p class="text-light">
+                    090747 89226
+              </p>
+              <button   data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg" >
+                Book now
+               </button>
+               
+            </div>
+            <div class="jumbotron" style="background:url('images/guus-baggermans-522634-unsplash (1).jpg');background-position: center;background-size:100%">
+              <h1 class="display-4 glow-white custom-fonts-8 mb-5" style="color:rgb(0, 0, 0);font-size: 400%">Matrix Be Beautiful Salon
+                </h1>
+                <!-- <hr class="my-4" /> -->
+              <p class="lead text-black glow ">
+                  2nd floor Sapna Sangeeta mall ( INOX Building, Sapna Sangeeta Rd, Indore, Madhya Pradesh 452001
+              </p>
+             
+              <p class="text-white">
+                  087704 36772
+              </p>
+              <button   data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg" >
+                Book now
+               </button>
+               
+            </div>
+            
+            <div class="jumbotron" style="background:url('images/SLIDER-2.jpg');background-position: top;background-size:100%">
+              <h1 class="display-4 glow-white custom-fonts-8 mb-5" style="color:rgb(255, 255, 255);font-size: 400%">Jawed Habib Hair And Beauty
+                </h1>
+                <!-- <hr class="my-4" /> -->
+              <p class="lead text-white ">
+                  13, Agra Bombay Rd, Vishnu Puri Colony, Indore, Madhya Pradesh 452014
+              </p>
+             
+              <p class="text-light">
+                  0731 428 5557
+              </p>
+      
+                <button   data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg" >
+                 Book now
+                </button>
+                
+              
+            </div>
+        
+           
+            
+            
+            <div class="jumbotron" style="background:url('images/ayo-ogunseinde-775458-unsplash (1) (1).jpg');background-position: center;background-size:100%">
+              <h1 class="display-4 glow custom-fonts-8 mb-5" style="color:rgb(255, 255, 255);font-size: 400%">Shades Beauty Salon
+                </h1>
+                <!-- <hr class="my-4" /> -->
+                <!-- <div class="mt"> -->
+              <p class="lead text-white ">
+                  Mechanic Nagar, 237, Indrapuri Colony Main Rd, Bhanwar Kuwa, Indore
+              </p>
+             
+              <p class="text-light">
+                  093021 20676
+              </p>
+              <button   data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg" >
+                Book now
+               </button>
+               
+            </div>
+    
+   
+              
+  
+          <div class="jumbotron" style="background:url('images/people-2587157 (1).jpg');background-position: center;background-size:100%">
+                  <h1 class="display-4 glow custom-fonts-8 mb-5" style="color:rgb(255, 255, 255);font-size: 400%">Crown Beauty Clinic & Salon
+                    </h1>
+                    <!-- <hr class="my-4" /> -->
+                  <p class="lead text-white ">
+                      10, Agra Bombay Rd,Opp. Bhanwarkua Thana, Bhawarkua Nagar, Indore, Madhya Pradesh 
+                  </p>
+                 
+                  <p class="text-light">
+                      090747 89226
+                  </p>
+                  <button   data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg" >
+                    Book now
+                   </button>
+                   
+                </div>
+  
+              
+               
+        </div>
+  
+        
+  </div>
+       
+  </div>
+      </div>
+       </div>
+
+       <div class="modal fade success-popup"  style="background:rgba(0, 0, 0, 0.39);" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content"  style="border-radius: 30px;height: 300px;"  >
+            <div class="modal-header" style="border-top-left-radius:30px; border-top-right-radius:30px;">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div style="margin-right: 25%"><h4 class="modal-title custom-fonts-8 " id="myModalLabel">Thank You !</h4></div>
+            </div>
+           
+           
+            <div class="success-checkmark mt-3" >
+              <div class="check-icon" >
+                <span class="icon-line line-tip"></span>
+                <span class="icon-line line-long"></span>
+                <div class="icon-circle"></div>
+                <div class="icon-fix"></div>
+              </div>
+            </div>
+           
+                <div style="margin-left: 10%"><p class="lead">Your booking is confirmed</p></div>
+                <a href="index.html" class="rd_more btn btn-default">Go to Home</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+ $("button").click(function () {
+  $(".check-icon").hide();
+  setTimeout(function () {
+    $(".check-icon").show();
+  }, 10);
+});
+
+    </script>
+  <script>
+$("button").click(function() {
+  swal("Success Message Title", "Well done, you pressed a button", "success")
+});
+  </script>
+  </body>
+</html>
